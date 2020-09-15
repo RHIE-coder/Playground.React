@@ -263,15 +263,18 @@ Say good bye bye 너의 모습 멀어져만 가 가.<br>
 
 *--------------------------------------------------------*
 
- - 책갈피 역할을 할 내부 링크는 아래와 같이 하면 된다. 공백은 `-`로 처리하자. `#`의 갯수를 주의하자
+ - 책갈피 역할을 할 내부 링크는 아래와 같이 하면 된다. 공백은 `-`로 처리하자. `#`이 1개인 것만 가능하지만 약간의 꼼수를 쓰면 된다.
 
-```
-[맨 위로](#Hello)
-[이전 목차](#[-4-]-구간-나누기)
+ - 꼼수 : `<a id="keyword"> ~~~ </a>`
+
 ```
 [내부이동](#Hello)
 
-###### Caution
+###### <a id="back">welcome back here</a>
+```
+[내부이동](#Hello)
+
+###### <a id="back">welcome back here</a>
 
  - VSCODE의 Preview에선 한글도 먹히지만, 실제 Github에는 안먹힌다. 
 
@@ -577,4 +580,4 @@ https://emojipedia.org/people/
 
 
 # Hello
-## [Let's Go Back!](######Caution)
+## [Let's Go Back!](#back)
