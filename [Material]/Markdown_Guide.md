@@ -266,12 +266,14 @@ Say good bye bye 너의 모습 멀어져만 가 가.<br>
  - 책갈피 역할을 할 내부 링크는 아래와 같이 하면 된다. 공백은 `-`로 처리하자. `#`의 갯수를 주의하자
 
 ```
-[맨 위로](#Github-마크다운-익히기)
+[맨 위로](#Hello)
 [이전 목차](#[-4-]-구간-나누기)
 ```
-[맨 위로](#Github-마크다운-익히기)
+[내부이동](#Hello)
 
-[이전 목차](#[-4-]-구간-나누기)
+###### Caution
+
+ - VSCODE의 Preview에선 한글도 먹히지만, 실제 Github에는 안먹힌다. 
 
 <br><br><br><br><br>
 
@@ -492,20 +494,18 @@ https://emojipedia.org/people/
 
 ### [ 12 ] 각주
 ```md
-주석을 적용할 문장[^1]
+주석을 적용할 문장<a href="#detail" id="summary"><sup>[1]</sup></a>
 
-[^1]: 주석에 작성할 내용
+<a href="#summary" id="detail">[1]</a>: 주석에 작성할 내용
 ```
 
 *------------------------실제화면------------------------*
 
-주석을 적용할 문장[^1]
+주석을 적용할 문장<a href="#detail" id="summary"><sup>[1]</sup></a>
 
-[^1]: 주석에 작성할 내용
+<a href="#summary" id="detail">[1]</a>: 주석에 작성할 내용
 
 *--------------------------------------------------------*
-
- - VSCODE 미리보기에는 적용안되니 당황하지 마용^^
 
 <br><br><br><br><br>
 
@@ -571,3 +571,10 @@ https://emojipedia.org/people/
 
 # END
 
+---
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+# Hello
+## [Let's Go Back!](######Caution)
