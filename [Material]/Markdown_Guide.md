@@ -268,13 +268,18 @@ Say good bye bye 너의 모습 멀어져만 가 가.<br>
  - 꼼수 : `<a id="keyword"> ~~~ </a>`
 
 ```
-[내부이동](#Hello)
+[내부이동](#Hello-Guys)
 
 ###### <a id="back">welcome back here</a>
 ```
-[내부이동](#Hello)
+
+*------------------------실제화면------------------------*
+
+[내부이동](#Hello-Guys)
 
 ###### <a id="back">welcome back here</a>
+
+*--------------------------------------------------------*
 
  - VSCODE의 Preview에선 한글도 먹히지만, 실제 Github에는 안먹힌다. 
 
@@ -579,5 +584,5 @@ https://emojipedia.org/people/
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-# Hello
+# Hello Guys
 ## [Let's Go Back!](#back)
