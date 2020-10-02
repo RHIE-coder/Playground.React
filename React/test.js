@@ -1,13 +1,15 @@
-function myFunc() {
-    this.name = "hello";
-
-    this.sample = function () {
-        return function () {
-            console.log(this.name);
-        }.bind(this);
-    }
+let A = {
+    "a": 10,
+    "b": "hello"
 }
 
-var smp = new myFunc();
-console.log(smp.name);
-var fun = smp.sample()();
+let B = {
+    "a": 10,
+    "b": "hello"
+}
+
+let C = {
+    "a": 10
+}
+
+console.log(Object.is(B));
