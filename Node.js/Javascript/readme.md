@@ -42,7 +42,7 @@
 ### 7. do~while문
 ### 8. continue문, break문
 ### 9. 레이블문
-### 10. for~in문, for~of문
+### 10. `for~in`문, `for~of`문
 
 ## `[5] 함수`
 ### 1. 함수 정의하고 사용하기
