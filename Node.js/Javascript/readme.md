@@ -114,3 +114,7 @@ Pipe
 Object.create(), Object.assign(), Object.entries(), Obejct.fromEntries(), Object.is, Object.freeze Object 프로퍼티 관련
 
 정규표현식
+
+Polyfill
+
+[Partial Applications, Currying, Compose and Pipe](https://muang-kim.tistory.com/274?category=835461)
