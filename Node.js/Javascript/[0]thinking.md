@@ -176,3 +176,160 @@ const students = {
     console.log(result);
 }
 ```
+javaScript is synchronous.
+```js
+class UserStorage{
+    loginUser(id, password, onSuccess, onError){
+        setTimeout(()=>{
+            if(
+                (id === 'rhie' && password ==='dream') ||
+                (id === 'coder' && password ==='academy')
+            ){
+                onSuccess(id);
+            }else{
+                onError(new Error('not found'));
+            }
+        }, 2000)
+    }
+
+    getRoles(user, onSuccess, onError){
+        setTimeout(() => {
+            if(user ==='rhie'){
+                onSuccess({name:'rhie', role: 'admin'});
+            }else{
+                onError(new Error('on access'));
+            }
+        }, 1000)
+    }
+}
+
+const userStorage = new UserStorage();
+const id = prompt('enter your id');
+const password = prompt('enter your password');
+userStorage.loginUser(
+    id,
+    password,
+    user => {
+        userStorage.getRoles(
+            user,
+            userWithRole => {
+                alert(
+                    `Hello ${userWithRole.name}, you have a ${userWithRole.role} role`
+                )
+            },
+            error => {
+                console.log(error);
+            }
+        )
+    },
+    error => {
+        console.log(error);
+    }
+)
+
+```
+
+```js
+//state : pending --> fulfilled or rejected
+//producer
+//When new Promise is created, the executor runs automatically.
+const promise = new Promise(resolve, reject) =>{
+    console.log("do Something,,,");
+    setTimeout(()=>{
+        resolve('rhie');
+    }, 2000);
+}
+//consumer : then, catch, finally
+promise
+.then(value=>{
+    console.log(value);
+})
+.catch(error=>{
+    console.log(error);
+})
+.finally(()=>{
+    console.log('finally');
+})
+
+//promise chaining
+const fetchNumber = new Promise((resolve, reject) => {
+    setTimeout(()=>resolve(1), 1000);
+});
+
+fetchNumber
+.then(num => num * 2)
+.then(num => num * 3)
+.then(num => {
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => resolve(num-1), 1000);
+    })
+})
+.then(new => console.log(num)); //5
+```
+
+```js
+//Error Handling
+const getHen = () =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve("닭"), 1000);
+    });
+const getEgg = hen =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${hen} => 계란`), 1000);
+    });
+const getEgg = egg =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${egg} => 후라이드`), 1000);
+    });
+
+getHen() //콜백함수를 전달할 때 받아오는 value를 바로 하나를 호출하는 경우 생략할 수 있다. 매개변수를 말하는 것이다. 암묵적으로 호출해준다.
+    .then(getEgg) //.then(hen => getEgg(hen))
+    .then(egg) //.then(egg => cook(egg))
+    .then(console.log); //.then(meal => console.log(meal));
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# vscode 쓸만한 Extenstion
+```
+Material Theme
+Prettier => Tab : 2, sing quote
+Bracket Pair Colorizer
+indent Rainbow
+auto rename tag
+css peek
+HTML CSS Support
+HTML to CSS autocompletion
+Live Server
+github Markdown Preview
+REST Client
+Emmet 내장
+```
+# 프론트 사이트
+jsFiddle.net
+
+jsbin.com
+
+codesandbox.io
+
+## JSON
+
+jsondiff.com
+
+jsonbeautifier.org
+
+jsonparser.org
+
+json validator
+

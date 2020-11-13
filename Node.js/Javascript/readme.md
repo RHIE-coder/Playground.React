@@ -118,3 +118,5 @@ Object.create(), Object.assign(), Object.entries(), Obejct.fromEntries(), Object
 Polyfill
 
 [Partial Applications, Currying, Compose and Pipe](https://muang-kim.tistory.com/274?category=835461)
+
+제너레이터
